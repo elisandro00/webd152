@@ -29,6 +29,9 @@ nav {
   padding: 1em; /* p1em */
   text-align: center;
 }
+li {
+  list-style: none;
+}
 nav a {
   text-decoration: none;
 } /* txd */
