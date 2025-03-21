@@ -138,7 +138,7 @@ td {
 .text {
   text-align: left; /* ta:l */
 }
-tr:nth-of-type(odd) {
+tr:nth-last-of-type(odd) {
   background-color: #ffcd6f;
 }
 @media (max-width: 600px) {
@@ -150,45 +150,50 @@ tr:nth-of-type(odd) {
   #trailhero {
     background-size: auto;
   }
-}
-#special table {
-  display: block;
-  border-bottom: none;
-}
-#special td,
-#special th {
-  display: block;
-}
-#special thead {
-  display: none;
-}
-td.package::before {
-  content: "Package:";
-}
-td.description::before {
-  content: "Description:";
-}
-td.nights::before {
-  content: "Nights:";
-}
-td.cost::before {
-  content: "Cost:";
-}
-td.package,
-td.description,
-td.nights,
-td.cost {
-  padding-left: 35%;
-  position: relative;
-  text-align: left;
-  font-size: 4vw;
-}
-td::before {
-  position: absolute;
-  top: 10px;
-  left: 0.5em;
-  font-weight: bold;
-  color: #1976d2;
+  #special table {
+    display: block; /* db */
+    border-bottom: none; /* bd:n */
+  }
+  #special td,
+  #special th {
+    display: block; /* db */
+  }
+  /* Hide the table header elements */
+  #special thead {
+    display: none; /* dn */
+  }
+  /* Use the ::before pseudo-element to inject these labels */
+  td.package::before {
+    content: "Package:";
+  }
+  td.description::before {
+    content: "Description:";
+  }
+  td.nights::before {
+    content: "Nights:";
+  }
+  td.cost::before {
+    content: "Cost:";
+  }
+  td.package,
+  td.description,
+  td.nights,
+  td.cost {
+    padding-left: 35%; /* pl35% */
+    position: relative; /* pos:r */
+    text-align: left; /* ta:l */
+    font-size: 4vw;
+  }
+  td::before {
+    position: absolute; /* pos:a */
+    top: 10px; /* t6 */
+    left: 0.5em; /* l.5em */
+    font-weight: bold; /* fwb */
+    color: #1976d2; /* c#1976d2 */
+  }
+  td:last-of-type {
+    border-bottom: 2px solid #1b69b2; /*bb2-solid#1b69b2 */
+  }
 }
 @media (min-width: 600px) {
   nav ul {
